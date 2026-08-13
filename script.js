@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded",() => {
     const likeSvg {
     //localiza o contador
 
-    let textNode = Array
-    
+    let textNode = Array.from(likeBtn.childNodes).find(node) =>
+
     }
 } )

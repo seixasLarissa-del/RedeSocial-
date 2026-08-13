@@ -56,12 +56,12 @@ object-fit: cover;
 .username {
 font-weight: 600;
 font-size: 14px;
-color: #1c1e21;
+color: #fdfeff;
 }
 
 .more-options {
 cursor: pointer;
-color: #1c1e21;
+color: #eff2f7;
 }
 
 /* Mídia / Foto */
