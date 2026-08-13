@@ -153,15 +153,15 @@ stroke-linejoin: round;
 .post-details {
 padding: 0 16px 12px 16px;
 font-size: 13px;
-color: #1c1e21;
+color: #f5f6f8;
 }
 
 .likes {
-color: #4b5563;
+color: #f4f7fc;
 }
 
 .likes strong {
-color: #1c1e21;
+color: #f7f8fa;
 }
 
 /* Barra de Navegação Inferior */
@@ -175,7 +175,7 @@ background: #ffffff;
 }
 
 .nav-item {
-color: #1c1e21;
+color: #fcfcfc;
 cursor: pointer;
 }
 
