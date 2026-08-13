@@ -170,8 +170,8 @@ display: flex;
 justify-content: space-around;
 align-items: center;
 padding: 12px 0 16px 0;
-border-top: 1px solid #000000;
-background: #ffffff;
+border-top: 1px solid #faf7f7;
+background: #000000;
 }
 
 .nav-item {
