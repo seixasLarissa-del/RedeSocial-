@@ -21,3 +21,11 @@ if(textNode){
 }
 
 
+
+//coração
+function applyLikedStyle (){
+    likeSvg.style.fill = "#4091d4";
+    likeSvg.style.stroke = "#e144ef";
+    likeSvg.style.color = "#44ef77";
+
+}
