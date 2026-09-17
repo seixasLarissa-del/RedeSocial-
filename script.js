@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!likeBtn || !likeCountEl) return;
 
-  let count = 1200;
+  let count = 800;
   let isLiked = false;
 
   const formatLikes = (num) => {
@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     return num.toString();
   };
+
+  likeCountEl.textContent = formatLikes(count);
 
   likeBtn.addEventListener("click", () => {
     if (!isLiked) {
