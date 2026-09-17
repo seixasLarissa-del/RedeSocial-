@@ -1,14 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const likeBtn = document.querySelector("#like-btn");
   const likeCountEl = document.querySelector("#like-count");
+  const postMedia = document.querySelector(".post-media");
 
   if (!likeBtn || !likeCountEl) return;
 
-  // Contador numérico real controlado exclusivamente pelo JS
   let count = 800;
   let isLiked = false;
 
-  // Formata o número: exibe o valor normal até 999 e inclui o 'k' a partir de 1000
   const formatLikes = (num) => {
     if (num >= 1000) {
       return (num / 1000).toFixed(1) + "k";
@@ -16,10 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return num.toString();
   };
 
-  // Força a renderização inicial na tela para 800
   likeCountEl.textContent = formatLikes(count);
 
-  likeBtn.addEventListener("click", () => {
+  const toggleLike = () => {
     if (!isLiked) {
       count += 1;
       isLiked = true;
@@ -29,8 +27,18 @@ document.addEventListener("DOMContentLoaded", () => {
       isLiked = false;
       likeBtn.classList.remove("liked");
     }
-
-    // Atualiza o texto na tela a cada clique
     likeCountEl.textContent = formatLikes(count);
-  });
+  };
+
+  // Curtir pelo botão de coração
+  likeBtn.addEventListener("click", toggleLike);
+
+  // Curtir ao dar duplo clique na foto/tela
+  if (postMedia) {
+    postMedia.addEventListener("dblclick", () => {
+      if (!isLiked) {
+        toggleLike();
+      }
+    });
+  }
 });
