@@ -4,16 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!likeBtn || !likeCountEl) return;
 
+  // Contador numérico real controlado exclusivamente pelo JS
   let count = 800;
   let isLiked = false;
 
+  // Formata o número: exibe o valor normal até 999 e inclui o 'k' a partir de 1000
   const formatLikes = (num) => {
     if (num >= 1000) {
-      return (num / 1000).toFixed(1) + "K";
+      return (num / 1000).toFixed(1) + "k";
     }
     return num.toString();
   };
 
+  // Força a renderização inicial na tela para 800
   likeCountEl.textContent = formatLikes(count);
 
   likeBtn.addEventListener("click", () => {
@@ -27,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       likeBtn.classList.remove("liked");
     }
 
+    // Atualiza o texto na tela a cada clique
     likeCountEl.textContent = formatLikes(count);
   });
 });
